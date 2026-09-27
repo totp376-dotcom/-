@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tiffany-50: #f0fbfb;
+  --color-tiffany-100: #d8f5f4;
+  --color-tiffany-200: #b1edeb;
+  --color-tiffany-300: #7be0dd;
+  --color-tiffany-400: #3eccca;
+  --color-tiffany-500: #0abab5;
+  --color-tiffany-600: #089b97;
+  --color-tiffany-700: #077b78;
+  --color-tiffany-800: #09615f;
+  --color-tiffany-900: #0c504f;
+  --color-tiffany-950: #032e2e;
+
+  --color-navy-50: #f0f4f9;
+  --color-navy-100: #dde5f0;
+  --color-navy-200: #c0cfe3;
+  --color-navy-300: #94b0d0;
+  --color-navy-400: #628bb9;
+  --color-navy-500: #3f6da3;
+  --color-navy-600: #2f5586;
+  --color-navy-700: #26446d;
+  --color-navy-800: #13243d;
+  --color-navy-900: #0b172a;
+  --color-navy-950: #060c18;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #f4f8f8;
+    color: #0b172a;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Mascot animations */
+@keyframes schooly-bob {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes schooly-blink {
+  0%, 90%, 100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes schooly-wing-left {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-14deg);
+  }
+}
+
+@keyframes schooly-wing-right {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(18deg);
+  }
+}
+
+@keyframes schooly-happy-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  30% {
+    transform: translateY(-16px) scale(1.05);
+  }
+  60% {
+    transform: translateY(-4px) scale(0.98);
+  }
+}
+
+@keyframes schooly-dangle-feet {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(-18deg) translateY(-2px);
+  }
+  75% {
+    transform: rotate(18deg) translateY(-2px);
+  }
+}
+
+@keyframes schooly-wings-flutter {
+  0%, 100% {
+    transform: scaleY(1) rotate(0deg);
+  }
+  50% {
+    transform: scaleY(0.4) rotate(22deg);
+  }
+}
+
+@keyframes schooly-backflip {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  40% {
+    transform: translateY(-38px) rotate(-180deg) scale(1.15);
+  }
+  75% {
+    transform: translateY(-10px) rotate(-340deg) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) rotate(-360deg) scale(1);
+  }
+}
+
+@keyframes schooly-dance {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  20% {
+    transform: translateY(-10px) rotate(-8deg) scale(1.03);
+  }
+  40% {
+    transform: translateY(0) rotate(4deg) scale(0.98);
+  }
+  60% {
+    transform: translateY(-12px) rotate(8deg) scale(1.04);
+  }
+  80% {
+    transform: translateY(-2px) rotate(-4deg) scale(0.99);
+  }
+}
+
+@keyframes schooly-squish {
+  0% {
+    transform: scale(1.25, 0.75);
+  }
+  40% {
+    transform: scale(0.85, 1.15);
+  }
+  70% {
+    transform: scale(1.08, 0.94);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes schooly-float-roam {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(14px, -12px);
+  }
+  50% {
+    transform: translate(4px, -20px);
+  }
+  75% {
+    transform: translate(-12px, -8px);
+  }
+}
+
+@keyframes schooly-heart-float {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-16px) scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-32px) scale(0.8);
+  }
+}
+
+.animate-schooly-bob {
+  animation: schooly-bob 3.2s ease-in-out infinite;
+}
+
+.animate-schooly-blink {
+  transform-origin: center;
+  animation: schooly-blink 4s ease-in-out infinite;
+}
+
+.animate-schooly-wing-left {
+  transform-origin: 30% 60%;
+  animation: schooly-wing-left 1.6s ease-in-out infinite;
+}
+
+.animate-schooly-wing-right {
+  transform-origin: 70% 60%;
+  animation: schooly-wing-right 1.4s ease-in-out infinite;
+}
+
+.animate-schooly-bounce {
+  animation: schooly-happy-bounce 0.8s ease-in-out;
+}
+
+.animate-schooly-feet {
+  transform-origin: 50% 90%;
+  animation: schooly-dangle-feet 0.35s ease-in-out infinite;
+}
+
+.animate-schooly-flutter {
+  animation: schooly-wings-flutter 0.18s ease-in-out infinite;
+}
+
+.animate-schooly-flip {
+  animation: schooly-backflip 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.animate-schooly-dance {
+  animation: schooly-dance 1.4s ease-in-out infinite;
+}
+
+.animate-schooly-squish {
+  animation: schooly-squish 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.animate-schooly-roam {
+  animation: schooly-float-roam 6s ease-in-out infinite;
+}
+
+.animate-schooly-heart {
+  animation: schooly-heart-float 1.2s ease-out forwards;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+
